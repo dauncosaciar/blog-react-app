@@ -1,2 +1,21 @@
+@import "../../scss/index.scss";
+
 .error404 {
+  h1 {
+    color: red;
+
+    @include respond(small) {
+      color: blue;
+    }
+    @include respond(medium) {
+      color: green;
+      text-transform: uppercase;
+    }
+    @include respond(large) {
+      color: yellow;
+    }
+    @include respond(extralarge) {
+      color: purple;
+    }
+  }
 }

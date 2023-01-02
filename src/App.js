@@ -2,24 +2,30 @@
 
 import React from "react";
 import { Layout } from "antd";
-import Routing from "./routes/Routing";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import configRouting from "./routes/configRouting";
 import MenuTop from "./components/MenuTop";
+import Footer from "./components/Footer";
 
 export default function App() {
-  const { Header, Content, Footer } = Layout;
+  const { Header, Content } = Layout;
 
   return (
     <>
       <Layout>
-        <Header>
-          <MenuTop />
-        </Header>
-        <Content>
-          <Routing />
-        </Content>
-        <Footer>
-          <h1>Footer...</h1>
-        </Footer>
+        <Router>
+          <Header style={{ zIndex: 1 }}>
+            <MenuTop />
+          </Header>
+          <Content>
+            <Routes>
+              {configRouting.map((route, index) => (
+                <Route key={index} path={route.path} element={<route.page />} />
+              ))}
+            </Routes>
+          </Content>
+          <Footer />
+        </Router>
       </Layout>
     </>
   );

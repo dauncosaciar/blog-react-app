@@ -1,2 +1,33 @@
-.menu-top {
+.ant-layout-header {
+  background-color: #fff !important;
+
+  .menu-top {
+    display: flex;
+
+    &__logo {
+      display: flex;
+      margin-right: 40px;
+
+      img {
+        width: 50px;
+      }
+    }
+
+    .ant-menu {
+      border-bottom: none;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 16px;
+      justify-content: flex-end;
+      width: 100%;
+
+      .ant-menu-item-active,
+      .ant-menu-item-selected {
+        color: #d87f74;
+
+        &::after {
+          border-bottom-color: #d87f74;
+        }
+      }
+    }
+  }
 }

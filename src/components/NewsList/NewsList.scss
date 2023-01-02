@@ -1,0 +1,63 @@
+@import "../../scss/index.scss";
+
+.news-list {
+  box-shadow: 0 0 10px #ccc;
+  margin: 0 auto !important;
+  margin-top: 50px !important;
+
+  @include respond(medium) {
+    width: 90%;
+  }
+
+  @include respond(large) {
+    width: 80%;
+  }
+
+  .ant-list-header {
+    background-color: #194f82;
+    border-radius: 8px 8px 0 0;
+
+    h2 {
+      color: #fff;
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 800;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  .ant-list-items {
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  &__new {
+    .ant-list-item-meta {
+      .ant-list-item-meta-title {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    .buttons {
+      a {
+        display: inline-block;
+
+        button {
+          background-color: #d87f74;
+          font-size: 13px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

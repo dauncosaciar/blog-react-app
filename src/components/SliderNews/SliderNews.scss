@@ -1,0 +1,63 @@
+@import "../../scss/index.scss";
+
+.slider-news {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  height: 600px;
+
+  &__new {
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    &-info {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 16px;
+      text-align: center;
+      line-height: 1.3;
+
+      @include respond(large) {
+        padding: 32px;
+      }
+
+      @include respond(extralarge) {
+        padding: 96px;
+      }
+
+      &-date {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-weight: 700;
+
+        @include respond(extralarge) {
+          font-size: 32px;
+        }
+      }
+
+      p {
+        display: none;
+
+        @include respond(large) {
+          display: block;
+        }
+      }
+
+      button {
+        background-color: #d87f74;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
