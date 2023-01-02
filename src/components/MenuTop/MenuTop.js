@@ -12,8 +12,8 @@ export default function MenuTop() {
 
   const items = [
     { key: "home", label: <Link to="/">Home</Link> },
-    { key: "search", label: <Link to="/search">Buscador</Link> },
-    { key: "login", label: <Link to="/login">Iniciar Sesión</Link> }
+    { key: "search", label: <Link to="/search">Search</Link> },
+    { key: "profile", label: <Link to="/profile">Profile</Link> }
   ];
 
   const setActiveItem = (e) => {

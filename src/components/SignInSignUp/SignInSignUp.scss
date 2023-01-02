@@ -1,0 +1,31 @@
+@import "../../scss/index.scss";
+
+.signin-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 112px);
+
+  &__content {
+    font-family: "Nunito Sans", sans-serif;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+
+    h1 {
+      font-weight: 700;
+      margin: 25px 0;
+
+      @include respond(extralarge) {
+        font-size: 32px;
+      }
+    }
+
+    Button {
+      font-family: "Nunito Sans", sans-serif;
+      text-transform: uppercase;
+    }
+  }
+}

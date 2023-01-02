@@ -2,8 +2,7 @@
 
 .news-list {
   box-shadow: 0 0 10px #ccc;
-  margin: 0 auto !important;
-  margin-top: 50px !important;
+  margin: 50px auto !important;
 
   @include respond(medium) {
     width: 90%;

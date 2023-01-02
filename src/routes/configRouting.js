@@ -1,19 +1,14 @@
 import Home from "../pages/Home";
 import Search from "../pages/Search";
-import User from "../pages/User";
+import Profile from "../pages/Profile";
 import Error404 from "../pages/Error404";
 import New from "../pages/New";
-import SignInSignUp from "../pages/SignInSignUp";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
-    path: "/login",
-    page: SignInSignUp
-  },
-  {
-    path: "/user/:id",
-    page: User
+    path: "/profile",
+    page: Profile
   },
   {
     path: "/new/:id",
