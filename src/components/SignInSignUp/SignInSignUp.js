@@ -9,7 +9,8 @@ import SignUpForm from "../SignUpForm";
 
 import "./SignInSignUp.scss";
 
-export default function SignInSignUp() {
+export default function SignInSignUp(props) {
+  const { setRefreshCheckLogin } = props;
   const [showModal, setShowModal] = useState(false);
   const [contentModal, setContentModal] = useState(null);
 
@@ -32,7 +33,11 @@ export default function SignInSignUp() {
             >
               Sign Up
             </Button>
-            <Button onClick={() => openModal(<SignInForm />)}>Sign In</Button>
+            <Button
+              onClick={() => openModal(<SignInForm setRefreshCheckLogin={setRefreshCheckLogin} />)}
+            >
+              Sign In
+            </Button>
           </div>
         </Col>
       </Row>

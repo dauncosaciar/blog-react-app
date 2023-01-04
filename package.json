@@ -7,6 +7,8 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "antd": "^5.1.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "node-sass": "^8.0.0",
     "query-string": "^8.1.0",
@@ -14,6 +16,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

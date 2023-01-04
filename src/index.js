@@ -4,6 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import "antd/dist/reset.css";
+import "react-toastify/dist/ReactToastify.css";
 import "./index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
