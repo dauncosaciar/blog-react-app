@@ -1,6 +1,6 @@
 /* Página que muestra el componente de registro o el perfil del usuario, dependiendo si está o no logueado */
 
-import React, { useState } from "react";
+import React from "react";
 import useAuth from "../../hooks/useAuth";
 import SignInSignUp from "../../components/SignInSignUp";
 import User from "../../components/User";
@@ -13,7 +13,11 @@ export default function Profile(props) {
 
   return (
     <div className="profile">
-      {userLogged ? <User /> : <SignInSignUp setRefreshCheckLogin={setRefreshCheckLogin} />}
+      {userLogged ? (
+        <User setRefreshCheckLogin={setRefreshCheckLogin} />
+      ) : (
+        <SignInSignUp setRefreshCheckLogin={setRefreshCheckLogin} />
+      )}
     </div>
   );
 }

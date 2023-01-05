@@ -68,7 +68,7 @@ export default function SignInForm(props) {
         <Form.Item label="Password">
           <Input.Password name="password" value={formData.password} onChange={onChange} />
         </Form.Item>
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+        <Form.Item wrapperCol={{ xs: { offset: 0, span: 24 }, sm: { offset: 8, span: 16 } }}>
           <Button type="primary" htmlType="submit">
             {!signUpLoading ? (
               "Login"

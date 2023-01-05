@@ -39,7 +39,7 @@ export default function MenuTop() {
       </div>
       <Menu
         onClick={(e) => setActiveItem(e)}
-        defaultSelectedKeys={[current]}
+        selectedKeys={[current]}
         theme="light"
         mode="horizontal"
         items={items}

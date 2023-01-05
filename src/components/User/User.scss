@@ -1,2 +1,97 @@
+@import "../../scss/index.scss";
+
 .user {
+  background-color: #eee;
+  height: calc(100vh - 112px);
+
+  &__avatarbanner {
+    margin-top: 30px;
+    position: relative;
+
+    .banner {
+      background-color: #194f82;
+      background-position: center center;
+      background-size: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #aaa;
+      height: 300px;
+    }
+    .avatar {
+      background-color: #d87f74;
+      background-size: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #aaa;
+      height: 125px;
+      width: 125px;
+      position: absolute;
+      bottom: -30px;
+      left: 16px;
+    }
+  }
+
+  &__info {
+    margin-top: 40px;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 32px;
+
+      @include respond(medium) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      h2,
+      .options {
+        @include respond(medium) {
+          width: calc(50% - 1rem);
+        }
+      }
+
+      h2 {
+        color: #194f82;
+        display: flex;
+        flex-direction: column;
+        font-family: "Nunito Sans", sans-serif;
+        font-weight: 800;
+        margin-bottom: 16px;
+
+        span {
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        @include respond(medium) {
+          margin-bottom: 0;
+        }
+      }
+      .options {
+        @include respond(medium) {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        button {
+          font-family: "Nunito Sans", sans-serif;
+          text-transform: uppercase;
+          width: 125px;
+        }
+      }
+    }
+
+    .content {
+      border-bottom: 1px solid #ccc;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 16px;
+
+      p {
+        svg {
+          fill: #d87f74;
+        }
+      }
+    }
+  }
 }

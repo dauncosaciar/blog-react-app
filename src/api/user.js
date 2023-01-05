@@ -27,7 +27,7 @@ export function getUserApi(id) {
 }
 
 export function uploadAvatarApi(file) {
-  const url = `${USER_URL_HOST}/subiravatar`;
+  const url = `${USER_URL_HOST}/subirAvatar`;
 
   const formData = new FormData(); // Enviar Multipart Forms (para subir ficheros)
   formData.append("avatar", file);
