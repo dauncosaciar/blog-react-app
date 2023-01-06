@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Button, Card } from "antd";
+import { ClockCircleOutlined } from "@ant-design/icons";
 import moment from "moment";
 import DefaultBackgroundImage from "../../assets/img/default_bg.jpg";
 
@@ -29,17 +30,18 @@ function NewCard(props) {
   const urlImage = image ? image : DefaultBackgroundImage;
 
   return (
-    <Card
-      // eslint-disable-next-line jsx-a11y/img-redundant-alt
-      cover={<img src={urlImage} alt="New Image" />}
-      title={category.toUpperCase()}
-      bordered={false}
-    >
-      <h3>{title}</h3>
-      <p>{moment(published_at).calendar()}</p>
-      <a href={url} target="_blank" rel="noopener noreferrer">
-        <Button type="primary">More Info</Button>
-      </a>
+    <Card title={category.toUpperCase()} bordered={false}>
+      <div className="image" style={{ backgroundImage: `url("${urlImage}")` }} />
+      <div className="content">
+        <h3>{title}</h3>
+        <p>
+          <ClockCircleOutlined style={{ fontSize: "15px", marginRight: "5px" }} />{" "}
+          {moment(published_at).calendar()}
+        </p>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <Button type="primary">More Info</Button>
+        </a>
+      </div>
     </Card>
   );
 }

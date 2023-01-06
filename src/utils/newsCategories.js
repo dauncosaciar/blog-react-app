@@ -1,5 +1,9 @@
 export const newsCategories = [
   {
+    value: "general",
+    label: "General"
+  },
+  {
     value: "business",
     label: "Business"
   },

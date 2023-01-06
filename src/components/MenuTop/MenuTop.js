@@ -2,14 +2,17 @@
 
 import React, { useState } from "react";
 import { Menu } from "antd";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Logo from "../../assets/img/logo.svg";
 
 import "./MenuTop.scss";
 
-export default function MenuTop() {
-  const [current, setCurrent] = useState("home");
+export default withRouter(MenuTop);
+
+function MenuTop(props) {
+  const { location } = props;
+  const [current, setCurrent] = useState(getSelectedItem(location));
   const loggedUser = useAuth();
 
   let items = [];
@@ -39,7 +42,7 @@ export default function MenuTop() {
       </div>
       <Menu
         onClick={(e) => setActiveItem(e)}
-        selectedKeys={[current]}
+        defaultSelectedKeys={[current]}
         theme="light"
         mode="horizontal"
         items={items}
@@ -47,4 +50,23 @@ export default function MenuTop() {
       <Outlet />
     </div>
   );
+}
+
+function withRouter(Component) {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    let history = useNavigate();
+    let params = useParams();
+
+    return <Component {...props} location={location} params={params} history={history} />;
+  }
+
+  return ComponentWithRouterProp;
+}
+
+function getSelectedItem(location) {
+  const pathnameCleaned = location.pathname.split("/")[1];
+  const key = pathnameCleaned ? pathnameCleaned : "home";
+
+  return key;
 }
