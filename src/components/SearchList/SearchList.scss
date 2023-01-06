@@ -1,0 +1,23 @@
+@import "../../scss/index.scss";
+
+.search-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .ant-card {
+    margin-bottom: 32px !important;
+    width: 100%;
+
+    @include respond(small) {
+      width: calc(50% - 16px);
+    }
+    @include respond(large) {
+      width: calc(33.33% - 16px);
+    }
+    @include respond(extralarge) {
+      width: calc(25% - 16px);
+    }
+  }
+}
