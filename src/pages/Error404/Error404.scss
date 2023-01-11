@@ -1,21 +1,16 @@
-@import "../../scss/index.scss";
-
 .error404 {
-  h1 {
-    color: red;
+  height: calc(100vh - 112px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-    @include respond(small) {
-      color: blue;
-    }
-    @include respond(medium) {
-      color: green;
-      text-transform: uppercase;
-    }
-    @include respond(large) {
-      color: yellow;
-    }
-    @include respond(extralarge) {
-      color: purple;
-    }
+  h1 {
+    font-size: 60px;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 40px;
   }
 }
