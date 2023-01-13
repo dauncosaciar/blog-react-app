@@ -16,8 +16,6 @@ export default function SignInForm(props) {
   const [signUpLoading, setSignUpLoading] = useState(false);
 
   const onSubmit = (e) => {
-    console.log(formData);
-
     let validCount = 0; // Cuenta la cantidad de campos en el form que se han rellenado
     values(formData).some((value) => {
       value && validCount++;
