@@ -69,7 +69,6 @@ export default function SignUpForm(props) {
           <Input name="lastName" value={formData.lastName} onChange={onChange} />
         </Form.Item>
         <Form.Item
-          name="email"
           label="Email"
           rules={[{ type: "email", message: "The input is not valid Email!" }]}
         >

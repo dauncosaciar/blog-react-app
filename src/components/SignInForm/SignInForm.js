@@ -57,7 +57,6 @@ export default function SignInForm(props) {
       <h2>Login</h2>
       <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }} onFinish={onSubmit}>
         <Form.Item
-          name="email"
           label="Email"
           rules={[{ type: "email", message: "The input is not valid Email!" }]}
         >
